@@ -1,0 +1,44 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+circle#circle1 {
+	transform-origin-x: 170px;
+	transform-origin-y: 70px;
+	animation-delay: 0.4s;
+}
+
+circle#circle2 {
+	transform-origin-x: 500px;
+	transform-origin-y: 86px;
+	animation-delay: 0.7s;
+}
+
+circle#circle3 {
+	transform-origin-x: 450px;
+	transform-origin-y: 148px;
+	animation-delay: 1.3s;
+}
+
+circle#circle4 {
+	transform-origin-x: 200px;
+	transform-origin-y: 112px;
+	animation-delay: 2.1s;
+}
+
+circle#circle1, circle#circle2,
+circle#circle3, circle#circle4 {
+    animation: pulsate 2s ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes pulsate {
+    0% {transform: scale(0.5); opacity: 0.0;}
+    50% {transform: scale(1.0); opacity: 1.0;}
+    100% {transform: scale(2.0); opacity: 0.0;}
+    }
